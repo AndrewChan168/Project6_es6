@@ -3,3 +3,5 @@ In this project, I created a DApp supply chain solution backed by the Ethereum p
 
 ***
 ## Libraries used in this project
+This project is implement on on Ethereum and is based on Truffle. The version of libraries used:
+* __Truffle__:
