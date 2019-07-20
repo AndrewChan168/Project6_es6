@@ -1,0 +1,621 @@
+{
+  "contractName": "RolesRegister",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addConsumer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isRetailer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceConsumer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceDistributor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addDistributor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addFarmer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceFarmer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isConsumer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addRetailer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isDistributor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isFarmer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceRetailer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ConsumerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ConsumerRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "RetailerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "RetailerRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "DistributorAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "DistributorRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "FarmerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "FarmerRemoved",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x60806040526200001e3362000072640100000000026401000000009004565b6200003833620000dc640100000000026401000000009004565b620000523362000146640100000000026401000000009004565b6200006c33620001b0640100000000026401000000009004565b62000372565b620000968160006200021a6401000000000262000a57179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b620001008160016200021a6401000000000262000a57179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b6200016a8160026200021a6401000000000262000a57179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b620001d48160036200021a6401000000000262000a57179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156200025757600080fd5b620002728282620002dd640100000000026401000000009004565b1515156200027f57600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156200031b57600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610be280620003826000396000f3006080604052600436106100ba576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063112940f9146100bf5780635da09b881461010257806361e6982d1461015d578063644241db146101745780637250e2241461018b57806380c3f96d146101ce57806380fc0ce414610211578063834ff739146102285780638ec4f505146102835780638f0c86fa146102c6578063b942906914610321578063db0e6a2f1461037c575b600080fd5b3480156100cb57600080fd5b50610100600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610393565b005b34801561010e57600080fd5b50610143600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610443565b604051808215151515815260200191505060405180910390f35b34801561016957600080fd5b50610172610460565b005b34801561018057600080fd5b5061018961046b565b005b34801561019757600080fd5b506101cc600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610476565b005b3480156101da57600080fd5b5061020f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610526565b005b34801561021d57600080fd5b506102266105d6565b005b34801561023457600080fd5b50610269600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105e1565b604051808215151515815260200191505060405180910390f35b34801561028f57600080fd5b506102c4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105fe565b005b3480156102d257600080fd5b50610307600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106ae565b604051808215151515815260200191505060405180910390f35b34801561032d57600080fd5b50610362600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106cb565b604051808215151515815260200191505060405180910390f35b34801561038857600080fd5b506103916106e8565b005b61039c336105e1565b151515610437576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f436f6e73756d657220636f756c64206e6f742063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b610440816106f3565b50565b600061045982600261074d90919063ffffffff16565b9050919050565b610469336107e1565b565b6104743361083b565b565b61047f336106ae565b15151561051a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001807f4469737472696275746f7220636f756c64206e6f742063616c6c20746869732081526020017f66756e6374696f6e00000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b61052381610895565b50565b61052f336106cb565b1515156105ca576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001807f4661726d657220636f756c64206e6f742063616c6c20746869732066756e637481526020017f696f6e000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6105d3816108ef565b50565b6105df33610949565b565b60006105f782600361074d90919063ffffffff16565b9050919050565b61060733610443565b1515156106a2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f52657461696c657220636f756c64206e6f742063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6106ab816109a3565b50565b60006106c482600161074d90919063ffffffff16565b9050919050565b60006106e182600061074d90919063ffffffff16565b9050919050565b6106f1336109fd565b565b610707816003610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561078a57600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6107f5816003610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f09860405160405180910390a250565b61084f816001610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6108a9816001610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b610903816000610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b61095d816000610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b6109b7816002610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b610a11816002610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db60405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610a9357600080fd5b610a9d828261074d565b151515610aa957600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610b4357600080fd5b610b4d828261074d565b1515610b5857600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050505600a165627a7a72305820fea3079156763ba657e38faa8cdbd42c91b004ac456ea64ac377691225dfeff50029",
+  "deployedBytecode": "0x6080604052600436106100ba576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063112940f9146100bf5780635da09b881461010257806361e6982d1461015d578063644241db146101745780637250e2241461018b57806380c3f96d146101ce57806380fc0ce414610211578063834ff739146102285780638ec4f505146102835780638f0c86fa146102c6578063b942906914610321578063db0e6a2f1461037c575b600080fd5b3480156100cb57600080fd5b50610100600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610393565b005b34801561010e57600080fd5b50610143600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610443565b604051808215151515815260200191505060405180910390f35b34801561016957600080fd5b50610172610460565b005b34801561018057600080fd5b5061018961046b565b005b34801561019757600080fd5b506101cc600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610476565b005b3480156101da57600080fd5b5061020f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610526565b005b34801561021d57600080fd5b506102266105d6565b005b34801561023457600080fd5b50610269600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105e1565b604051808215151515815260200191505060405180910390f35b34801561028f57600080fd5b506102c4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105fe565b005b3480156102d257600080fd5b50610307600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106ae565b604051808215151515815260200191505060405180910390f35b34801561032d57600080fd5b50610362600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106cb565b604051808215151515815260200191505060405180910390f35b34801561038857600080fd5b506103916106e8565b005b61039c336105e1565b151515610437576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f436f6e73756d657220636f756c64206e6f742063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b610440816106f3565b50565b600061045982600261074d90919063ffffffff16565b9050919050565b610469336107e1565b565b6104743361083b565b565b61047f336106ae565b15151561051a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001807f4469737472696275746f7220636f756c64206e6f742063616c6c20746869732081526020017f66756e6374696f6e00000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b61052381610895565b50565b61052f336106cb565b1515156105ca576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001807f4661726d657220636f756c64206e6f742063616c6c20746869732066756e637481526020017f696f6e000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6105d3816108ef565b50565b6105df33610949565b565b60006105f782600361074d90919063ffffffff16565b9050919050565b61060733610443565b1515156106a2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f52657461696c657220636f756c64206e6f742063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6106ab816109a3565b50565b60006106c482600161074d90919063ffffffff16565b9050919050565b60006106e182600061074d90919063ffffffff16565b9050919050565b6106f1336109fd565b565b610707816003610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561078a57600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6107f5816003610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f09860405160405180910390a250565b61084f816001610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6108a9816001610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b610903816000610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b61095d816000610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b6109b7816002610a5790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b610a11816002610b0790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db60405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610a9357600080fd5b610a9d828261074d565b151515610aa957600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610b4357600080fd5b610b4d828261074d565b1515610b5857600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050505600a165627a7a72305820fea3079156763ba657e38faa8cdbd42c91b004ac456ea64ac377691225dfeff50029",
+  "sourceMap": "151:83:6:-;;;603:22:3;614:10;603;;;:22;;;:::i;:::-;555:27:2;571:10;555:15;;;:27;;;:::i;:::-;693:24:4;706:10;693:12;;;:24;;;:::i;:::-;613::1;626:10;613:12;;;:24;;;:::i;:::-;151:83:6;;1492:111:3;1545:20;1557:7;1545;:11;;;;;;:20;;;;;:::i;:::-;1589:7;1577:20;;;;;;;;;;;;1492:111;:::o;1537:126:2:-;1595:25;1612:7;1595:12;:16;;;;;;:25;;;;;:::i;:::-;1649:7;1632:25;;;;;;;;;;;;1537:126;:::o;1618:117:4:-;1673:22;1687:7;1673:9;:13;;;;;;:22;;;;;:::i;:::-;1721:7;1707:22;;;;;;;;;;;;1618:117;:::o;1538::1:-;1593:22;1607:7;1593:9;:13;;;;;;:22;;;;;:::i;:::-;1641:7;1627:22;;;;;;;;;;;;1538:117;:::o;258:172:5:-;350:1;331:21;;:7;:21;;;;323:30;;;;;;;;369:18;373:4;379:7;369:3;;;:18;;;:::i;:::-;368:19;360:28;;;;;;;;420:4;397;:11;;:20;409:7;397:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;258:172;;:::o;760:173::-;847:4;890:1;871:21;;:7;:21;;;;863:30;;;;;;;;907:4;:11;;:20;919:7;907:20;;;;;;;;;;;;;;;;;;;;;;;;;900:27;;760:173;;;;:::o;151:83:6:-;;;;;;;",
+  "deployedSourceMap": "151:83:6:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1204:91:1;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1204:91:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;1114:106:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1114:106:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1366:75:1;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1366:75:1;;;;;;1353:81:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1353:81:2;;;;;;1179:100;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1179:100:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;1172:87:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1172:87:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;1328:71;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1328:71:3;;;;;;1034:106:1;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1034:106:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1284:91:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1284:91:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;1000:112:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1000:112:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1008:102:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1008:102:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1446:75:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1446:75:4;;;;;;1204:91:1;894:22;905:10;894;:22::i;:::-;893:23;885:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1268:21;1281:7;1268:12;:21::i;:::-;1204:91;:::o;1114:106:4:-;1172:4;1192:22;1206:7;1192:9;:13;;:22;;;;:::i;:::-;1185:29;;1114:106;;;:::o;1366:75:1:-;1408:27;1424:10;1408:15;:27::i;:::-;1366:75::o;1353:81:2:-;1398:30;1417:10;1398:18;:30::i;:::-;1353:81::o;1179:100::-;851:25;865:10;851:13;:25::i;:::-;850:26;842:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1249:24;1265:7;1249:15;:24::i;:::-;1179:100;:::o;1172:87:3:-;874:20;883:10;874:8;:20::i;:::-;873:21;865:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1234:19;1245:7;1234:10;:19::i;:::-;1172:87;:::o;1328:71::-;1368:25;1382:10;1368:13;:25::i;:::-;1328:71::o;1034:106:1:-;1092:4;1112:22;1126:7;1112:9;:13;;:22;;;;:::i;:::-;1105:29;;1034:106;;;:::o;1284:91:4:-;974:22;985:10;974;:22::i;:::-;973:23;965:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1348:21;1361:7;1348:12;:21::i;:::-;1284:91;:::o;1000:112:2:-;1061:4;1081:25;1098:7;1081:12;:16;;:25;;;;:::i;:::-;1074:32;;1000:112;;;:::o;1008:102:3:-;1064:4;1084:20;1096:7;1084;:11;;:20;;;;:::i;:::-;1077:27;;1008:102;;;:::o;1446:75:4:-;1488:27;1504:10;1488:15;:27::i;:::-;1446:75::o;1538:117:1:-;1593:22;1607:7;1593:9;:13;;:22;;;;:::i;:::-;1641:7;1627:22;;;;;;;;;;;;1538:117;:::o;760:173:5:-;847:4;890:1;871:21;;:7;:21;;;;863:30;;;;;;;;907:4;:11;;:20;919:7;907:20;;;;;;;;;;;;;;;;;;;;;;;;;900:27;;760:173;;;;:::o;1761:125:1:-;1819:25;1836:7;1819:9;:16;;:25;;;;:::i;:::-;1872:7;1856:24;;;;;;;;;;;;1761:125;:::o;1775:134:2:-;1836:28;1856:7;1836:12;:19;;:28;;;;:::i;:::-;1895:7;1876:27;;;;;;;;;;;;1775:134;:::o;1537:126::-;1595:25;1612:7;1595:12;:16;;:25;;;;:::i;:::-;1649:7;1632:25;;;;;;;;;;;;1537:126;:::o;1492:111:3:-;1545:20;1557:7;1545;:11;;:20;;;;:::i;:::-;1589:7;1577:20;;;;;;;;;;;;1492:111;:::o;1705:119::-;1761:23;1776:7;1761;:14;;:23;;;;:::i;:::-;1810:7;1796:22;;;;;;;;;;;;1705:119;:::o;1618:117:4:-;1673:22;1687:7;1673:9;:13;;:22;;;;:::i;:::-;1721:7;1707:22;;;;;;;;;;;;1618:117;:::o;1841:125::-;1899:25;1916:7;1899:9;:16;;:25;;;;:::i;:::-;1952:7;1936:24;;;;;;;;;;;;1841:125;:::o;258:172:5:-;350:1;331:21;;:7;:21;;;;323:30;;;;;;;;369:18;373:4;379:7;369:3;:18::i;:::-;368:19;360:28;;;;;;;;420:4;397;:11;;:20;409:7;397:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;258:172;;:::o;501:175::-;596:1;577:21;;:7;:21;;;;569:30;;;;;;;;614:18;618:4;624:7;614:3;:18::i;:::-;606:27;;;;;;;;665:5;642:4;:11;;:20;654:7;642:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;501:175;;:::o",
+  "source": "pragma solidity ^0.4.24;\r\n\r\nimport \"./FarmerRole.sol\";\r\nimport \"./DistributorRole.sol\";\r\nimport \"./RetailerRole.sol\";\r\nimport \"./ConsumerRole.sol\";\r\n\r\ncontract RolesRegister is FarmerRole, DistributorRole, RetailerRole, ConsumerRole{}\r\n",
+  "sourcePath": "C:\\Users\\andrewchan88\\Documents\\Coding\\udacity\\Blockchain\\PartB\\homework\\project6_es\\contracts\\coffeeaccesscontrol\\RolesRegister.sol",
+  "ast": {
+    "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/RolesRegister.sol",
+    "exportedSymbols": {
+      "RolesRegister": [
+        633
+      ]
+    },
+    "id": 634,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 620,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/FarmerRole.sol",
+        "file": "./FarmerRole.sol",
+        "id": 621,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 408,
+        "src": "28:26:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/DistributorRole.sol",
+        "file": "./DistributorRole.sol",
+        "id": 622,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 291,
+        "src": "56:31:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/RetailerRole.sol",
+        "file": "./RetailerRole.sol",
+        "id": 623,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 525,
+        "src": "89:28:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/ConsumerRole.sol",
+        "file": "./ConsumerRole.sol",
+        "id": 624,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 174,
+        "src": "119:28:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 625,
+              "name": "FarmerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 407,
+              "src": "177:10:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FarmerRole_$407",
+                "typeString": "contract FarmerRole"
+              }
+            },
+            "id": 626,
+            "nodeType": "InheritanceSpecifier",
+            "src": "177:10:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 627,
+              "name": "DistributorRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 290,
+              "src": "189:15:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DistributorRole_$290",
+                "typeString": "contract DistributorRole"
+              }
+            },
+            "id": 628,
+            "nodeType": "InheritanceSpecifier",
+            "src": "189:15:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 629,
+              "name": "RetailerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 524,
+              "src": "206:12:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RetailerRole_$524",
+                "typeString": "contract RetailerRole"
+              }
+            },
+            "id": 630,
+            "nodeType": "InheritanceSpecifier",
+            "src": "206:12:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 631,
+              "name": "ConsumerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 173,
+              "src": "220:12:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ConsumerRole_$173",
+                "typeString": "contract ConsumerRole"
+              }
+            },
+            "id": 632,
+            "nodeType": "InheritanceSpecifier",
+            "src": "220:12:6"
+          }
+        ],
+        "contractDependencies": [
+          173,
+          290,
+          407,
+          524
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 633,
+        "linearizedBaseContracts": [
+          633,
+          173,
+          524,
+          290,
+          407
+        ],
+        "name": "RolesRegister",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 634,
+        "src": "151:83:6"
+      }
+    ],
+    "src": "0:236:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/RolesRegister.sol",
+    "exportedSymbols": {
+      "RolesRegister": [
+        633
+      ]
+    },
+    "id": 634,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 620,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/FarmerRole.sol",
+        "file": "./FarmerRole.sol",
+        "id": 621,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 408,
+        "src": "28:26:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/DistributorRole.sol",
+        "file": "./DistributorRole.sol",
+        "id": 622,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 291,
+        "src": "56:31:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/RetailerRole.sol",
+        "file": "./RetailerRole.sol",
+        "id": 623,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 525,
+        "src": "89:28:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/andrewchan88/Documents/Coding/udacity/Blockchain/PartB/homework/project6_es/contracts/coffeeaccesscontrol/ConsumerRole.sol",
+        "file": "./ConsumerRole.sol",
+        "id": 624,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 174,
+        "src": "119:28:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 625,
+              "name": "FarmerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 407,
+              "src": "177:10:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FarmerRole_$407",
+                "typeString": "contract FarmerRole"
+              }
+            },
+            "id": 626,
+            "nodeType": "InheritanceSpecifier",
+            "src": "177:10:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 627,
+              "name": "DistributorRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 290,
+              "src": "189:15:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DistributorRole_$290",
+                "typeString": "contract DistributorRole"
+              }
+            },
+            "id": 628,
+            "nodeType": "InheritanceSpecifier",
+            "src": "189:15:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 629,
+              "name": "RetailerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 524,
+              "src": "206:12:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RetailerRole_$524",
+                "typeString": "contract RetailerRole"
+              }
+            },
+            "id": 630,
+            "nodeType": "InheritanceSpecifier",
+            "src": "206:12:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 631,
+              "name": "ConsumerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 173,
+              "src": "220:12:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ConsumerRole_$173",
+                "typeString": "contract ConsumerRole"
+              }
+            },
+            "id": 632,
+            "nodeType": "InheritanceSpecifier",
+            "src": "220:12:6"
+          }
+        ],
+        "contractDependencies": [
+          173,
+          290,
+          407,
+          524
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 633,
+        "linearizedBaseContracts": [
+          633,
+          173,
+          524,
+          290,
+          407
+        ],
+        "name": "RolesRegister",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 634,
+        "src": "151:83:6"
+      }
+    ],
+    "src": "0:236:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xeb0b53869d44fe4ca4b1ef1a9dbf1673224b3bd5",
+      "transactionHash": "0x10f2e066b4586aaee4a9c2cc23890cb35482a6d18c978a302e22545c903880f8"
+    }
+  },
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2019-07-20T17:48:42.101Z"
+}
