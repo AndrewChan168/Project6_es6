@@ -18,3 +18,6 @@ Smart Contracts are deployed to __Rinkeby__ testnet.
 * __ConsumerRole__: 0x30952bc4a52c09638c4854c1d7d2cacf67e05682
 * __RolesRegister__: 0xeb0b53869d44fe4ca4b1ef1a9dbf1673224b3bd5
 * __SupplyChain__: 0x76393c720bbd6314bb50390e127daddceba2ecdf
+***
+### Class Model Diagram
+![ClassModel](Coffee Class Model UML Diagram.png)
