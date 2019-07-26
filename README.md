@@ -20,4 +20,5 @@ Smart Contracts are deployed to __Rinkeby__ testnet.
 * __SupplyChain__: 0x76393c720bbd6314bb50390e127daddceba2ecdf
 ***
 ### Class Model Diagram
+
 ![ClassModel](./Coffee Class Model UML Diagram.png)
